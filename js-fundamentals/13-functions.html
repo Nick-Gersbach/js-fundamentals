@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 13 - Functions</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 13 - Functions</h1>
+    <!-- Notes -->
+    <!-- 
+    Functions are blocks of code that can be called and resued over and over again
+     -->
+    <script>
+        //Function Declarations
+        function greeting() {
+            console.log('Hello There');
+        }
+
+        // calling the function
+        greeting();
+
+        //Usually you will use the return keyword to get a value from a function instead of logging it to the console.
+
+        function nick() {
+
+            return 'My name is Nick';
+        }
+
+        //Functions can take in parameters and arguments in between there (). Remember that these values are just placeholders for whatever you want them to return. They can be named anything but it's best to keep your parameters relevant and descriptive just like your variable names
+
+        //Declaring a function with a parameter
+        function secretMessage(message) {
+
+            return 'The secret message is... ' + message;
+
+        }
+
+        console.log(secretMessage('igloo'));
+
+        //Declaring a function with multiple parameters
+        function person(firstName, lastName) {
+
+            return 'Hello, my name is ' + firstName + ' ' + lastName;
+        }
+
+        console.log(person('Nicholas', 'Gersbach'));
+
+        //Defining Default values for parameters (ES6)
+        function sports(sportOne = 'Football', sportTwo = 'Basketball') {
+
+            return 'My favorite sports to watch are ' + sportOne + ' ' + 'and' + ' ' + sportTwo + '.';
+        }
+
+        console.log(sports());
+
+        //Function Expressions
+        const square = function (x) {
+            return x * x;
+        };
+
+        console.log(square(8));
+
+        //Function Expression with default parameter
+        const theSquare = function squareTwo(x = 3) {
+            return x * x;
+        };
+
+        console.log(theSquare());
+
+        //Immediatly invokable function expressions - IFFES (A function that you declare and run at the same time) - remember to add the parenthsis on the end!
+
+        (function () {
+            console.log('IFFE Ran...');
+        })();
+
+
+        //IFFE with a parameter
+        (function (myName) {
+            console.log('Hello ' + myName);
+        })('Nick.');
+
+        //IFFEs are used in the module design pattern to develop JS apps in a certain way.
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 1 - Using the Console</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 1 - Using the Console</h1>
+
+    <!-- Notes -->
+    <!-- 
+        - The console allows us to test things, debug, and quickly output values from our code
+        
+        - Before built in dev tools and the console, devs used to have to constantly use alert to test the code and get outputs.
+
+        - You can write brand new js code and execute it in the console
+
+        
+     -->
+    <script>
+        //we first ran this code in the console to test it and then copy and pasted it in our js to make it permamnent. That is the power of the console.
+        document.querySelector('h1').style.color = 'red';
+        "red";
+
+        //Logging to the console - You'll use this the most!
+        console.log('hello world!');
+
+        //Log Numbers
+        console.log(123);
+
+        //Log Booleans
+        console.log(true);
+
+        //Log Variables
+        var greeting = 'hello';
+        console.log(greeting);
+
+        //Logging Arrays
+        var myArray = [1, 2, 3, 'Hello', 'Goodbye'];
+        console.log(myArray);
+
+        //Log Objects
+        console.log({ a: 1, b: 2 });
+
+        //Log an object and print it out as a table
+        console.table({ a: 1, b: 2 })
+
+        //Log an error
+        console.error('This is an error');
+
+        //Clear the console
+        console.clear();
+
+        //Log a warning
+        console.warn('This is a warning');
+
+        //Make a timer - Everything in between time and end will be timed in the console. This can help you see how long something takes to execute.
+        console.time('Hello');
+
+        console.log('hello world');
+        console.log('hello world');
+        console.log('hello world');
+        console.log('hello world');
+        console.log('hello world');
+        console.log('hello world');
+        console.log('hello world');
+
+        console.timeEnd('Hello');
+    </script>
+</body>
+
+</html>

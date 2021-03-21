@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 4 - Type Conversion</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 4 - Type Conversion</h1>
+    <!-- Notes -->
+    <!-- 
+    THERE WILL BE TIMES DURING THE APP BUILDING PROCESS THAT YOU WILL NEED TO TAKE DATA AND CHANGE IT FROM ONE TYPE (A STRING) TO ANOTHER TYPE (A NUMBER). THIS IS WHERE TYPE CONVERSION COMES IN. YOU'LL PARSE THE DATA YOU NEED AND CHANGE IT INTO THE TYPE YOU NEED.
+
+
+
+
+     -->
+    <script>
+        let val;
+
+        //Number to string - Starting with a number
+        val = 5;
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length); //Comes back as undefined because it's not a string...yet
+
+        //Number to string - Converting the number to a string
+        val = String(5);
+        console.log(val);
+        console.log(typeof val);
+        console.log(val.length); //Comes back as string
+
+        let aValue;
+
+        //Boolean to string - Starting with a string
+        aValue = 10;
+        console.log(aValue);
+        console.log(typeof aValue);
+        console.log(aValue.length);
+
+        //Boolean to string - Converting the string to a Boolean
+        aValue = String(true);
+        console.log(aValue);
+        console.log(typeof aValue);
+        console.log(aValue.length);
+
+        //Date to a string
+        let aNewDate = (new Date());
+        console.log(typeof aNewDate);
+
+        aNewDate = String((new Date()));
+        console.log(typeof aNewDate);
+        console.log(aNewDate.length);
+
+        //Array to String
+        let changeMyArray = ['Hello', 'My', 'Name', 'is', 'Nick', 7, 25, 1991];
+        console.log(changeMyArray);
+        console.log(typeof changeMyArray);
+
+        changeMyArray = String(['Hello', 'My', 'Name', 'is', 'Nick', 7, 25, 1991]);
+        console.log(typeof changeMyArray);
+        console.log(changeMyArray.length);
+
+
+        //YOU CAN ALSO USE THE TO STRING METHOD toString()
+        let aNumber = 28;
+        console.log(aNumber.toString());
+
+        //String to Number
+        let aNewString = 'Hello there, old friend';
+        // console.log(aNewString.toFixed()); //Doesn't work because it's not a number yet.
+        aNewString = Number('Hello there, old friend');
+        console.log(aNewString);
+        console.log(typeof aNewString);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 3 - JS DataTypes</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 3 - JS DataTypes</h1>
+    <!-- Notes -->
+    <!-- 
+    PRIMITIVE DATA TYPES
+    - Accessed by actual value. Store on the stack in the variable
+
+    Examples - 
+
+    - String (A sentace/letters)
+    - Number (numbers/integers)
+    - Boolean (True/False)
+    - Null (A purposeful empty value)
+    - Undefined (No value given)
+    - Sybmols (ES6 Learn that later)
+
+    REFERENCE DATA TYPES
+    Accessed in the heap. whatever the fuck that means
+
+    Examples - 
+
+    - Arrays
+    - Object Literals
+    - Functions
+    - Dates
+    - Anything Else...
+
+    DYNAMIC VS STATIC TYPES LANGUAGES
+
+    JS is Dynamically typed meaning a varible/array/object can hold many different data types at once. Java, C#, C++ are all statically typed meaning that you have to tell the computer what type of datatype a variable can hold and it can then hold only that datatype. Typescript exists because it turns JS into a traditional static typed language with extra features.
+
+
+     -->
+    <script>
+        //PRIMITIVE DATA TYPES (CHECKED WITH THE typeof() method)
+
+        //String
+        const name = "John Doe";
+        console.log(typeof name);
+
+        //Number
+        const age = 29;
+        console.log(typeof age);
+
+        //Boolean
+        const hasKids = true;
+        console.log(typeof hasKids);
+
+        //Null
+        const car = null;
+        console.log(typeof car); //returns as an object but this is incorrect. Disreagrd this
+
+        //undefined
+        let color;
+        console.log(typeof color); //Must use let for undefined
+
+        //symbol
+        const sym = Symbol();
+        console.log(typeof sym);
+
+
+        //Refernce Types - These will all come bach as objects
+
+        //Array
+        const hobbies = ['Halo', 'James', 'bodybuilding'];
+        console.log(typeof hobbies);
+
+        //Object Literal
+        const address = {
+            city: 'Chandler',
+            state: 'Arizona',
+            type: 'House'
+        }
+
+        console.log(typeof address);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 10 - Dates and Times</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 10 - Dates and Times</h1>
+    <script>
+        let val;
+
+        //print todays date
+        const today = new Date();
+        console.log(today);
+
+        let birthday = new Date('07-25-1991');
+        console.log(birthday);
+
+        //Getting Date values (Months are 0 based)
+        val = today.getMonth();
+        console.log(val);
+
+        val = today.getDate();
+        console.log(val);
+
+        val = today.getFullYear();
+        console.log(val);
+
+        val = today.getHours();
+        console.log(val);
+
+        val = today.getMinutes();
+        console.log(val);
+
+        val = today.getSeconds();
+        console.log(val);
+
+        //Setting time and date
+        birthday.setMonth(6);
+        birthday.setDate(25);
+        birthday.setFullYear(1991);
+        birthday.setHours(9);
+        birthday.setMinutes(32);
+
+        console.log(birthday);
+    </script>
+</body>
+
+</html>

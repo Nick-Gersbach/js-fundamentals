@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 16 - Block scope with var, let, const</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 16 - Block scope with var, let, const</h1>
+    <!-- Notes -->
+    <!-- 
+        Gobal Variables are any variable that isn't inside of a function. Variables inside of a function are in the block level scope. They are in their own block of text inside {} and therefore they don't effect any variables outside of their scope. See the examples below.
+
+        Let and const work in the block and global scope as described above. var does not. var is always global is JS which causes security issues in apps. This is why you should always use let and const to declare variables.
+     -->
+    <script>
+        //Global Scope
+        var a = 1;
+        let b = 2;
+        const c = 3;
+
+        function test() {
+            var a = 4;
+            let b = 5;
+            const c = 6;
+            console.log('Function Scope: ', a, b, c);
+        }
+
+        test();
+
+        console.log('Global Scope: ', a, b, c);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 15 - The Window Object</title>
+</head>
+
+<body id="body">
+    <h1>Fundamentals Lesson 15 - The Window Object</h1>
+
+    <button type="button" id="btn">Change Background</button>
+    <!-- Notes -->
+    <!-- 
+        THE WINDOW OBECT IS THE BROWSER THAT YOU WORK IN - CHROME, IE, FIRE FOX. This is your main work enviroment in client side js which is where front end developers work.
+
+        NODE JS IS DIFFERENT IN THAT IN TURNS YOUR LOCAL MACHINE INTO THE WORKING ENVIROMENT RATHER THAN RELYING ON THE BROWSER.
+     -->
+    <script>
+        const bod = document.getElementById("body");
+        const theBtn = document.getElementById("btn");
+
+        theBtn.onclick = function () {
+            bod.style.background = 'red';
+        }
+
+        //WINDOWS / OBJECTS / PROPERTIES
+
+        // console.log(123)
+
+        //alert - You don't need the window but all of the stuff you do that shows up directly in the browser uses the window method whether you include window or not.
+        // window.alert('Hello World');
+
+        //PROMPT
+        // prompt('Enter your name:');
+
+        //CONFIRM
+        if (confirm('Are you sure?')) {
+            console.log('YES');
+        }
+    </script>
+</body>
+
+</html>

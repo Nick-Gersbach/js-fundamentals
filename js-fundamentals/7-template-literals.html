@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 7 - Template Literals</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 7 - Template Literals</h1>
+    <!-- Notes -->
+    <!-- 
+
+     -->
+    <script>
+        const name = 'John';
+        const age = 44;
+        const job = 'Teacher';
+        const city = 'Salt Lake';
+        let html;
+
+        //Inserting Data without Template Strings (ES5)
+        html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li></ul>';
+
+        document.body.innerHTML = html;
+
+        //Or you can put them on different lines to look neater
+        html = '<ul>' +
+            '<li>Age: ' + name + '</li>' +
+            '<li>Age: ' + age + '</li>' +
+            '<li>Age: ' + job + '</li>' +
+            '<li>Age: ' + city + '</li>' +
+
+            '</ul';
+
+        document.body.innerHTML = html;
+
+        //Instering a function value into our html page
+        function hello() {
+            return 'Hello friend';
+        }
+
+        //Using template strings (ES6) Using bact ticks ``
+        const name2 = 'Nick';
+        const age2 = 29;
+        const job2 = 'Web Developer';
+        const city2 = 'Chandler';
+        let person;
+
+        person = `
+            <ul>
+                <li>Name: ${name2} </li>
+                <li>Age: ${age2} </li>
+                <li>Job: ${job2} </li>
+                <li>City: ${city2} </li>
+                <li>Greeting: ${hello()}</li>
+            </ul>
+            `
+
+        document.body.innerHTML = person;
+    </script>
+</body>
+
+</html>

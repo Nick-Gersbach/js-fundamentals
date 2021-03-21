@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 8 - Arrays and Array Methods</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 8 - Arrays and Array Methods</h1>
+    <script>
+        //Creating an array
+        const numbers = [43, 90, 99, 87, 23, 12, 56, 75, 22];
+
+        //creating an array with the array constructor/object (ES6)
+        const numbers2 = new Array(22, 43, 33, 76, 100, 982, 123);
+
+        //Array of strings (fruit)
+        const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
+
+        //Array of mutiple data types
+        const mixed = [22, 'hello', true, undefined, null, new Date()];
+        console.log(mixed);
+
+        //MUTATING DIFFERENT ARRAYS AND VALUES
+        let val;
+
+        //Get the array length
+        val = numbers.length
+        console.log(val);
+
+        //Check if it is an array
+        val = Array.isArray(numbers2);
+        console.log(val);
+
+        //Get a single value
+        val = numbers[3];
+        console.log(val);
+
+        //insert a value into array
+        numbers[2] = 100;
+        console.log(numbers);
+
+        //Find index of value
+        val = numbers2.indexOf(33);
+        console.log(val);
+
+        //Mutating arrays (push and pop)
+
+        //push adds on to the end
+        numbers.push(250)
+        console.log(numbers);
+
+        //unshift adds a value to the front
+        numbers.unshift(4);
+        console.log(numbers);
+
+        //pop takes value off the end
+        numbers.pop();
+        console.log(numbers);
+
+        //Take value off the front
+        numbers.shift();
+        console.log(numbers);
+
+        //Splice values - take of numbers between one index point to another
+        numbers.splice(1, 4);
+        console.log(numbers);
+
+        //concatenate array
+        val = numbers.concat(numbers2);
+        console.log(val);
+    </script>
+</body>
+
+</html>

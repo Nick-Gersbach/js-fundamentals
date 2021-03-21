@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 12 - Switches</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 12 - Switches</h1>
+    <!-- Notes -->
+    <!--  
+        Switches are another way of writing if statements
+
+    -->
+    <script>
+        const color = 'pink';
+
+        switch (color) {
+            case 'red':
+                console.log('The color is red');
+                break;
+            case 'blue':
+                console.log('The color is blue');
+                break;
+            case 'green':
+                console.log('The color is green');
+                break;
+            case 'black':
+                console.log('The color is black');
+                break;
+            default:
+                console.log('The color is not listed in our data...')
+                break;
+        }
+
+        let day;
+
+        //Determining the day of the week 
+        switch (new Date().getDay()) {
+            case 0:
+                day = 'Sunday';
+                break;
+            case 1:
+                day = 'Monday';
+                break;
+            case 2:
+                day = 'Tuesday';
+                break;
+            case 3:
+                day = 'Wednesday';
+                break;
+            case 0:
+                day = 'Thursday';
+                break;
+            case 0:
+                day = 'Friday';
+                break;
+            case 0:
+                day = 'Saturday';
+                break;
+        }
+
+        console.log(`Today is ${day}`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 14 - Loops</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 14 - Loops</h1>
+    <!-- Notes -->
+    <!-- 
+        LOOP - A loop is an instruction to the computer that repeats until a specific condition is reached.
+
+        - Most of the time you will use loops to loop through arrays.
+
+        - You must always use var or let inside of a loop becuase the values will always be changing.
+
+        - i and x are usually used when declaring loops
+
+        - in general, you can use whatever type of loop you want to get the job done. However, nerds will tell you the following rules - 
+
+        LOOP RECOMENDATIONS
+
+        1. You should us a for loop when you know how many iterations a loop will have.
+
+        2. Use a while loop when you don't know how many iterations a loop will have.        
+
+        3 POPULAR LOOPS
+
+        FOR LOOPS - The loop below says this...
+
+        1. i is = to 0 (i = 0;)
+        2. when i is less than 10 (i < 10;)
+        3. Add one to i (i++) or i equals i + 1.
+
+        When we execute this loop, it will keep add 1 to i as long as i is less than 10. Once the condition of i equalling 10 is met, the loop will stop runnung. This is a mini app that counts to 10.
+
+        for(let i = 0; i < 10; i++) {
+            console.log(i) // We log the loop to the console so we can see what's happening. At the end of the loop 10 is not included because 10 is not less than 10. If you change it to <= 10 it would show the 10 in the loop.
+        }
+
+           //COMBINING AN IF STATEMENT WITH A FOR LOOP
+
+           This for loop and if statement says i = 0. If i isn't greater than or equal to 10, add one to i until this is true. However, when we reach 4, print the string 4 is my favorite nyumber. When you run the loop it will run 4 is my favorite number and then it will still print the number 4. However, you can simply put continue afrer the console log and it will then skip the regualr 4 and just print your string and go to 5.
+
+        for (let i = 0; i <= 10; i++) {
+            if (i === 4) {
+                console.log('4 is my favorite number!');
+                continue;
+            }
+
+            console.log('Number ' + i);
+        }
+
+        //USING BREAK TO STOP A LOOP
+        THE BREAK KEYWORD STOPS A LOOP FROM EXECUTING ANY FURTHER. SEE THE EXAMPLE BELOW...
+
+         for (let i = 0; i <= 10; i++) {
+            if (i === 4) {
+                console.log('4 is my favorite number!');
+                continue;
+            }
+
+            if (i === 5) {
+                console.log('Stop the loop!')
+                break;
+            }
+
+            console.log('Number ' + i);
+        }
+
+        WHILE LOOPS - 
+
+        let i = 0;
+
+        while(i < 10) {
+            console.log('Number ' + i);
+            i++;
+        }
+
+
+        DO WHILE LOOPS - These loops are different because they will always run at least once no matter what.
+
+        let n = 0;
+
+        do {
+            console.log('Number ' + n)
+            n++;
+        }
+
+        while(n <= 10);
+     -->
+    <script>
+        //FOR LOOP
+        for (let i = 0; i < 10; i++) {
+            console.log(i) // We log the loop to the console so we can see what's happening.
+        }
+
+        //MY FOR LOOP
+        for (let x = 10; x > 0; x--) {
+            console.log(x);
+        }
+
+        //FOR LOOP WITH A STRING ADDED
+        for (i = 0; i <= 25; i++) {
+            console.log('Number ' + i);
+        }
+
+        //COMBINING AN IF STATEMENT WITH A FOR LOOP
+        for (let i = 0; i <= 10; i++) {
+            if (i === 4) {
+                console.log('4 is my favorite number!');
+                continue;
+            }
+
+            console.log('Number ' + i);
+        }
+
+        //STOPPING A LOOP WITH BREAK
+        for (let i = 0; i <= 10; i++) {
+            if (i === 4) {
+                console.log('4 is my favorite number!');
+                continue;
+            }
+
+            if (i === 5) {
+                console.log('Stop the loop!')
+                break;
+            }
+
+            console.log('Number ' + i);
+        }
+
+        //WHILE LOOP
+        let j = 0;
+
+        while (j <= 10) {
+            console.log('Number ' + j);
+            j++;
+        }
+
+        //DO WHILE LOOP
+        let n = 0;
+
+        do {
+            console.log('Number ' + n)
+            n++;
+        }
+
+        while (n <= 10);
+
+        //LOOPING THROUGH AN ARRAY
+
+        const carNames = ['Ford', 'Chevy', 'Honda', 'Toyota', 'Buick', 'Saab'];
+
+        for (let d = 0; d < carNames.length; d++) {
+            console.log(carNames[d]);
+        }
+
+        //USING A FOR EACH LOOP TO LOOP THROUGH AN ARRAY - RECOMMENDED WAY OF DOING IT.
+        carNames.forEach(function (carName) {
+            console.log(carName);
+        });
+
+        //MAP METHOD
+        const users = [
+            { id: 1, name: 'John' },
+            { id: 2, name: 'Becky' },
+            { id: 3, name: 'Doug' },
+            { id: 4, name: 'Paul' },
+        ];
+
+        const ids = users.map(function (user) {
+            return user.id;
+        });
+
+        console.log(ids);
+
+        //FOR IN LOOP
+
+        const user = {
+            firstName: 'John',
+            lastName: 'Doe',
+            age: 29
+        }
+
+        for (let y in user) {
+            console.log(`${y} : ${user[y]}`);
+        }
+    </script>
+</body>
+
+</html>

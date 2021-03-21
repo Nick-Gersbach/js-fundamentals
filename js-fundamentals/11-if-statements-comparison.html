@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 11 - If Statements & Comparison Operator</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 11 - If Statements & Comparison Operator</h1>
+    <!-- Notes -->
+    <!-- 
+        if (something) {
+            do something
+        } else {
+            do something else
+        }
+
+        - Using === and !== will check the value and type and should be used almost all of the time
+     -->
+    <script>
+        const id = 100;
+
+        //Equal to
+        if (id === 100) {
+            console.log('Yes, it is equal');
+        } else {
+            console.log('Nope, it is not');
+        }
+
+        //Not Equal to
+        if (id !== 100) {
+            console.log('Yes, it is equal');
+        } else {
+            console.log('Nope, it is not');
+        }
+
+        //Greater than or less than
+        const val = 3000;
+
+        if (val >= 1000) {
+            console.log('Greater Than');
+        } else {
+            console.log('It is less than!');
+        }
+
+        //else if
+        const color = 'Green';
+
+        if (color === 'red') {
+            console.log('The color is red');
+        } else if (color === 'blue') {
+            console.log('The color is blue')
+        } else if (color === 'Green') {
+            console.log('The color Green')
+        } else {
+            console.log('The color is unknown')
+        }
+
+        //Logical Operators
+        const name = 'Nick';
+        const age = 29;
+
+        if (age > 0 && age > 17) {
+            console.log('This person is an adult.');
+        } else {
+            console.log('This person is a child.')
+        }
+
+        //Age checker app
+        const name1 = 'John Doe';
+        const age1 = 18;
+
+        if (age1 >= 0 && age1 >= 12) {
+            console.log('This person is a child');
+        } else if (age1 >= 12 && age <= 19) {
+            console.log('This person is a teenager');
+        } else {
+            console.log('This person is an adult');
+        }
+
+
+        // || or
+        if (age > 16 || age > 65) {
+            console.log('This person can not run in the race');
+        } else {
+            console.log('This person is registered for the race.')
+        }
+
+        // Ternaroy Operator ?
+        //? means if this is true then output this
+        //: is a symbol for else. else do this
+        //This syntax is just an ES6 shorthand way of writing an if else statement
+        console.log(id === 100 ? 'Correct' : 'Incorrect');
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals Lesson 2 - Var Let Const</title>
+</head>
+
+<body>
+    <h1>Fundamentals Lesson 2 - Var Let Const</h1>
+    <!-- Notes -->
+    <!-- 
+        There are 3 Ways to Declare Variables
+
+        1. var - can be reassigned on the global scope
+
+        2. let - can be reassigned on the global scope
+
+        3. const - Let's other programmers know that a value cannot be reassigned.
+
+        - let and const should be used now insead of var
+
+        - Variables can be made with letters, numbers, _, or $
+
+        - Variables can not start with a number!
+
+        - camelCase is the industry standard for multi word js
+
+     -->
+    <script>
+
+        //Declarting a variable with var
+        var name = 'Nick G';
+        console.log(name);
+        //Changing the value of the variable - (Can only be done with var and let)
+        name = 'Brad T';
+        console.log(name);
+
+        //Initilizing a variable (Creating a variable without a value)
+        var greeting;
+        console.log(greeting); //Returns undeined
+        greeting = "What's up!";
+        console.log(greeting); // Now it returns what's up!
+
+        //You will usually initilize a variable when you are using them in an if statement. You would say if something equals this than greeting equals that.
+
+        //Variables made with camelCase
+        var firstName = 'Nicholas';
+        var middleName = 'Jacob';
+        var lastName = 'Gersbach';
+
+        console.log("My name is " + " " + firstName + " " + middleName + " " + lastName);
+
+        //Using let - You can do all of the same things with let as you can with var on the global scope. All of the code that you wrote above with var will work the same with let.
+
+        //Const - Stands for constant. These variables can not change
+        const favoriteColor = 'Black';
+        console.log(favoriteColor);
+        // favoriteColor = 'green';
+        console.log(favoriteColor); //Throws an error. Can't change const
+
+        //You also can't initilize const variables. They must be given a value
+        // const job; // Throws an error
+
+        //People get confused with const when it comes to objects. You can change what's in an object made with const, you can't reassign the name of the object though...
+
+        const person = {
+            name: 'Nick',
+            age: 29,
+            car: 'Chevy'
+        }
+
+        //changing the name without error
+        person.name = 'Jake';
+        console.log(person);
+
+        //Same thing goes for arrays. You can push and pop data into an array as long as you don't rename the array itself
+
+    </script>
+</body>
+
+</html>
